@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package myinterface;
+
+/**
+ *
+ * @author Mitch
+ */
+public class SalaryPlusCommissionEmployee extends SalariedEmployee  {
+    private double commission;
+
+    public SalaryPlusCommissionEmployee(String name, String employeeId, String position, double salary, double commission ) {
+        super(name, employeeId, position, salary);
+        this.commission = commission;
+    }
+    public void updateCommision(double sale){
+        commission =+ sale * .25;
+                
+    }
+    
+    public double checkTotalCommision(){
+        return commission;
+        
+    }
+    
+    /**
+     *
+     * @return
+     */
+    @Override
+    public double getPayCheck(){
+       
+               return (this.getSalary()/24)+commission;
+    }
+
+    
+    
+}
