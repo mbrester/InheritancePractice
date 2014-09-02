@@ -13,9 +13,9 @@ package myinterface;
 public class SalaryPlusCommissionEmployee extends SalariedEmployee  {
     private double commission;
 
-    public SalaryPlusCommissionEmployee(String name, String employeeId, String position, double salary, double commission ) {
+    public SalaryPlusCommissionEmployee(String name, String employeeId, String position, double salary ) {
         super(name, employeeId, position, salary);
-        this.commission = commission;
+        
     }
     public void updateCommision(double sale){
         commission =+ sale * .25;

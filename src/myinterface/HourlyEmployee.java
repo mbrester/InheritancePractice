@@ -68,4 +68,7 @@ public class HourlyEmployee implements Employee {
     public double getPayCheck(){
         return (hourlyPay * hoursClocked);
     }
+    public double getHourlyPay() {
+        return hourlyPay;
+    }
 }
