@@ -11,24 +11,24 @@ package my.concrete;
  * @author Mitch
  */
 public class SalariedEmployee extends Employee {
-    private int salary;
+    private double salary;
     
 
-    public SalariedEmployee(String name, String employeeId, String position,int salary) {
+    public SalariedEmployee(String name, String employeeId, String position,double salary) {
         super(name, employeeId, position);
         this.salary = salary;
     }
     
-    public void payRaise(int raise) {
+    public void payRaise(double raise) {
        salary += raise;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
     
     
-    public int getPayCheck(){
+    public double getPayCheck(){
        return (salary/24);   
     }
    

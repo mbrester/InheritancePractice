@@ -11,30 +11,30 @@ package my.concrete;
  * @author Mitch
  */
 public class HourlyEmployee extends Employee {
-    private int hourlyPay;
-    private int hoursClocked;
+    private double hourlyPay;
+    private double hoursClocked;
     
   
-    public HourlyEmployee(String name, String employeeId, String email, int hourlyPay) {
+    public HourlyEmployee(String name, String employeeId, String email, double hourlyPay) {
         super(name, employeeId, email);
         this.hourlyPay = hourlyPay;
         
     }
 
-    public int getHourlyPay() {
+    public double getHourlyPay() {
         return hourlyPay;
     }
 
     
-    public void payRaise(int raise) {
+    public void payRaise(double raise) {
        hourlyPay += raise;
     }
     
-    public void hoursWorked(int hours){
+    public void hoursWorked(double hours){
         this.hoursClocked += hours;
     }
     
-    public int getPayCheck(){
+    public double getPayCheck(){
         return (hourlyPay * hoursClocked);
     }
     
